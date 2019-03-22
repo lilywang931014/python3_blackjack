@@ -109,4 +109,3 @@ def hit_or_stand(deck,hand):
         else:
             x = input("input invalid! please enter again!")
             continue
-        
