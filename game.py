@@ -72,3 +72,27 @@ class Chips:
 
     def lose_bet(self):
         self.total -= self.bet
+
+'''
+Function Definition
+'''
+
+def take_bet(chips):
+    while True:
+        try:
+            chips.bet = int(input("How much you wanna bet? "))
+        except:
+            print("Value is unavailable! ")
+            continue
+        else:
+            if chips.bet > chips.total:
+                print("You don't have enough!")
+                continue
+            else:
+                print("Successful")
+                break
+
+                
+def hit(deck,hand):
+    hand.add_card(deck.deal)
+    hand.adjust_for_ace()
