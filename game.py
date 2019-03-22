@@ -92,7 +92,21 @@ def take_bet(chips):
                 print("Successful")
                 break
 
-                
+
 def hit(deck,hand):
     hand.add_card(deck.deal)
     hand.adjust_for_ace()
+
+def hit_or_stand(deck,hand):
+    global playing  # to control an upcoming while loop
+
+    while playing:
+        x = input("Hit or Stand: ")
+        if x[0].lower() == "h":
+            hit(deck,hand)
+        elif x[0].lower() == "s":
+            playing = False
+        else:
+            x = input("input invalid! please enter again!")
+            continue
+        
