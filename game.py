@@ -23,3 +23,25 @@ class Card:
 
     def __str__(self):
         return "{} of {}".format(self.rank, self.suit)
+
+
+class Deck:
+
+    def __init__(self):
+        self.deck = []  # start with an empty list
+        for suit in suits:
+            for rank in ranks:
+                newCard = Card(suit,rank)
+                self.deck.append(newCard)
+
+    def __str__(self):
+        deck_com = ""
+        for i in self.deck:
+            deck_com = deck_com + i.__str__() + ","
+        return deck_com
+    def shuffle(self):
+        random.shuffle(self.deck)
+
+    def deal(self):
+        single_card = self.deck.pop()
+        return sincle_cards
