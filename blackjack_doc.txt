@@ -1,0 +1,34 @@
+Card:
+
+Deck:
+  shuffle()
+  deal()
+
+Hand:
+  add_card(card)
+  adjust_for_ace()
+
+Chips:
+  win_bet()
+  lose_bet()
+
+
+take_bet(chips)
+
+hit(deck, hand)
+
+hit_or_stand(deck, hand)
+
+show_some(player, dealer)
+
+show_all(player, dealer)
+
+player_busts(player,dealer,chips)
+
+player_wins(player,dealer,chips)
+
+dealer_busts(player,dealer,chips)
+
+dealer_wins(player,dealer,chips)
+
+push()
